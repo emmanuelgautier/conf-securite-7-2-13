@@ -1,0 +1,18 @@
+AddDefaultCharset UTF-8 
+SetEnv REGISTER_GLOBALS 1
+
+RewriteEngine On
+
+RewriteRule ^index.html index.php [QSA,L]
+
+RewriteRule ^captcha.png lib/captcha.php [QSA,L]
+
+RewriteRule  ^connexion.html  login.php [QSA,L]
+RewriteRule  ^inscription.html  register.php [QSA,L]
+RewriteRule  ^deconnection.html  logout.php [QSA,L]
+RewriteRule  ^mon-compte.html  account.php [QSA,L]
+RewriteRule  ^mot-de-passe.html  password.php [QSA,L]
+RewriteRule  ^contact.html contact.php [QSA,L]
+
+RewriteRule  ^supprimer-utilisateur-([0-9]+).html  delete_user.php?uid=$1 [QSA,L]
+
